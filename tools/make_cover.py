@@ -82,7 +82,7 @@ def main():
         kw = {}
         import os
         if os.path.exists("/opt/pw-browsers/chromium"):
-            pass
+            kw["executable_path"] = "/opt/pw-browsers/chromium"
         b = p.chromium.launch(**kw)
         pg = b.new_page(viewport={"width": 1280, "height": 720})
         pg.set_content(page_html)
